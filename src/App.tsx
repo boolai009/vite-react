@@ -106,6 +106,14 @@ const Portfolio: React.FC = () => {
         "Optimized performance reducing load times significantly",
         "Applied agile methodologies for on-time delivery"
       ]
+    },
+        {
+      company: "US NAVY",
+      position: "Aviation Admin",
+      period: "May 2004 - 2009",
+      highlights: [
+        "Managed flight records",
+      ]
     }
   ];
 
