@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
     "Programming Languages": ["C#", "JavaScript", "PHP", "SQL"],
     "Frameworks & Tools": ["Unity Game Engine", "Firebase", "ROS", "Ionic", ".NET", "Unreal Engine", "RESTful APIs"],
     "Development Practices": ["Agile Methodologies", "DevOps", "Algorithm Optimization", "Software Testing"],
-    "Databases": ["PostgreSQL", "Firestore", "NoSQL"],
+    "Databases": ["PostgreSQL", "Firestore", "NoSQL", "SQL"],
     "Other": ["UI/UX Design", "Project Management", "Team Leadership", "Client Communication"]
   };
 
@@ -196,10 +196,14 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
           <div className="hero-buttons">
-            <button className="btn-primary" type="button">
+            <a 
+              href="/Misael_Aponte_Resume.pdf" 
+              download="Misael Aponte_Mobile Architect_20250804.pdf"
+              className="btn-primary"
+            >
               <Download className="lucide" />
               <span>Download Resume</span>
-            </button>
+            </a>
             <button className="btn-secondary" type="button">
               <ExternalLink className="lucide" />
               <span>View Projects</span>
