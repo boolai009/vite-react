@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
   Code, 
   Mail, 
@@ -42,12 +42,7 @@ type Section = 'about' | 'skills' | 'experience' | 'contact';
 
 const Portfolio: React.FC = () => {
   const [activeSection, setActiveSection] = useState<Section>('about');
-  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const handleNavClick = (section: string): void => {
     setActiveSection(section.toLowerCase() as Section);
@@ -105,14 +100,6 @@ const Portfolio: React.FC = () => {
         "Generated $30 million in revenue through deployed solutions",
         "Optimized performance reducing load times significantly",
         "Applied agile methodologies for on-time delivery"
-      ]
-    },
-        {
-      company: "US NAVY",
-      position: "Aviation Admin",
-      period: "May 2004 - 2009",
-      highlights: [
-        "Managed flight records",
       ]
     }
   ];
