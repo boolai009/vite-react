@@ -1,0 +1,70 @@
+{
+  "functions": {
+    "src/**": {
+      "excludeFiles": "**/unity/**"
+    }
+  },
+  "routes": [
+    {
+      "src": "/unity/(.*)",
+      "dest": "/unity/$1"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/unity/**/*.wasm.gz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        },
+        {
+          "key": "Content-Encoding", 
+          "value": "gzip"
+        }
+      ]
+    },
+    {
+      "source": "/unity/**/*.js.gz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "Content-Encoding", 
+          "value": "gzip"
+        }
+      ]
+    },
+    {
+      "source": "/unity/**/*.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/unity/**/*.data.gz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/octet-stream"
+        },
+        {
+          "key": "Content-Encoding", 
+          "value": "gzip"
+        }
+      ]
+    }
+  ]
+}
