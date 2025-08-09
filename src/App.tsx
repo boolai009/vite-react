@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import { 
-  Code, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Download, 
-  ExternalLink, 
-  Award, 
-  Users, 
-  Zap, 
-  Database, 
-  Building, 
-  GraduationCap, 
-  Calendar, 
-  ChevronRight, 
-  Menu, 
+import {
+  Code,
+  Mail,
+  Phone,
+  MapPin,
+  Download,
+  ExternalLink,
+  Award,
+  Users,
+  Zap,
+  Database,
+  Building,
+  GraduationCap,
+  Calendar,
+  ChevronRight,
+  Menu,
   X,
-  LucideIcon 
+  LucideIcon
 } from 'lucide-react';
 import './App.css';
 
@@ -124,7 +124,7 @@ const Portfolio: React.FC = () => {
             </div>
             <span className="nav-title">Misael Aponte</span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="nav-links">
             {navigationItems.map((item: string) => (
@@ -140,7 +140,7 @@ const Portfolio: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="mobile-menu-button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             type="button"
@@ -178,7 +178,7 @@ const Portfolio: React.FC = () => {
             </span>
           </h1>
           <p className="hero-description">
-            10+ years of experience delivering scalable, business-critical software. 
+            10+ years of experience delivering scalable, business-critical software.
             Specializing in Unity development, system architecture, and leading cross-functional agile teams.
           </p>
           <div className="hero-tags">
@@ -196,18 +196,23 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
           <div className="hero-buttons">
-            <a 
-              href="/Misael_Aponte_Resume.pdf" 
+            <a
+              href="/Misael_Aponte_Resume.pdf"
               download="Misael Aponte_Mobile Architect_20250804.pdf"
               className="btn-primary"
             >
               <Download className="lucide" />
               <span>Download Resume</span>
             </a>
-            <button className="btn-secondary" type="button">
+            <a
+              href="/components"
+              className="btn-secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ExternalLink className="lucide" />
-              <span>View Projects</span>
-            </button>
+              <span>View Interactive Projects</span>
+            </a>
           </div>
         </div>
       </section>
@@ -303,7 +308,7 @@ const Portfolio: React.FC = () => {
               <p className="education-school">United States Navy</p>
               <p className="education-date">July 2004 - November 2009</p>
               <p className="education-description">
-                Managed administrative duties and maintenance planning for F-18 jet fighter operations, 
+                Managed administrative duties and maintenance planning for F-18 jet fighter operations,
                 developing leadership and technical project management skills.
               </p>
             </div>
